@@ -14,7 +14,7 @@ services:
     image: rndnguyenth/nguyenth:v1.0
     deploy:
       restart_policy:
-        condition: none
+        condition: on-failure
     entrypoint:
       - bash
       - -c
@@ -42,7 +42,7 @@ services:
     image: rndnguyenth/nguyenth:v1.0
     deploy:
       restart_policy:
-        condition: none
+        condition: on-failure
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
